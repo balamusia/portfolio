@@ -1,0 +1,605 @@
+<style>
+
+  #box{
+    
+    width: 95vw;
+    height: 95vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+  }
+  
+  .head{
+    
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    width: 30vw;
+    height: 20vh;
+    position: absolute;
+    top: 20%
+    
+  }
+  
+  .earleft{
+    border-radius: 5% 50%;
+    background-color: black;
+    display: flex;
+    width: 15vw;
+    height: 15vh;
+    position: absolute;
+    top: 7%;
+    left: 22%;
+    cursor: pointer;
+    
+  }
+  
+  .earright{
+    
+    border-radius: 50% 5%;
+    background-color: black;
+    display: flex;
+    width: 15vw;
+    height: 15vh;
+    position: absolute;
+    top: 7%;
+    right: 22%;
+    cursor: pointer;
+    
+  }
+  
+  .eyeleft{
+    border-radius: 20% 50%;
+    background-color: yellow;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    cursor: pointer;
+    
+  }
+  
+  .eyeright{
+    border-radius: 50% 20%;
+    background-color: yellow;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    cursor: pointer;
+    
+  }
+  
+  .body{
+    
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    width: 20vw;
+    height: 30vh;
+    position: absolute;
+    top: 42%;
+    transform: matrix(0,1,1,0,1,0);
+    
+    
+  }
+  
+  .armLeftAnchor{
+    
+    border-radius: 0%;
+    background-color: none;
+    display: flex;
+    width: 10vw;
+    height: 10vh;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    
+  }
+  
+  .armLeft{
+    border-radius: 50% 40%;
+    background-color: black;
+    display: flex;
+    width: 15vw;
+    height: 10vh;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    cursor: pointer;
+    
+  }
+  
+  .leftFinger1{
+    border-radius: 10% 50%;
+    background-color: black;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 0%;
+    right: 170%;
+    cursor: pointer;
+    
+  }
+  
+  .leftFinger2{
+    border-radius: 50% 50%;
+    background-color: black;
+    display: flex;
+    width: 6vw;
+    height: 5vh;
+    position: absolute;
+    top: 60%;
+    right: 180%;
+    cursor: pointer;
+    
+  }
+  
+  .leftFinger3{
+    border-radius: 50% 10%;
+    background-color: black;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 115%;
+    right: 160%;
+    cursor: pointer;
+    
+  }
+  
+  .armRightAnchor{
+    
+    border-radius: 0%;
+    background-color: none;
+    display: flex;
+    width: 10vw;
+    height: 10vh;
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    
+  }
+  
+  .armRight{
+    border-radius: 50% 40%;
+    background-color: black;
+    display: flex;
+    width: 15vw;
+    height: 10vh;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    cursor: pointer;
+    
+  }
+  
+  .rightFinger1{
+    border-radius: 50% 10%;
+    background-color: black;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 0%;
+    left: 170%;
+    cursor: pointer;
+    
+  }
+  
+  .rightFinger2{
+    border-radius: 50% 50%;
+    background-color: black;
+    display: flex;
+    width: 6vw;
+    height: 5vh;
+    position: absolute;
+    top: 60%;
+    left: 180%;
+    cursor: pointer;
+    
+  }
+  
+  .rightFinger3{
+    border-radius: 10% 50%;
+    background-color: black;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 115%;
+    left: 160%;
+    cursor: pointer;
+    
+  }
+  
+  
+  .legLeftAnchor{
+    
+    border-radius: 0%;
+    background-color: none;
+    display: flex;
+    width: 10vw;
+    height: 10vh;
+    position: absolute;
+    top: 65%;
+    left: 35%;
+    
+  }
+  
+  .legLeft{
+    border-radius: 50% 40% 30% 20%;
+    background-color: black;
+    display: flex;
+    width: 12vw;
+    height: 15vh;
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    cursor: pointer;
+    
+  }
+  
+  .legRightAnchor{
+    
+    border-radius: 0%;
+    background-color: none;
+    display: flex;
+    width: 10vw;
+    height: 10vh;
+    position: absolute;
+    top: 65%;
+    right: 35%;
+    
+  }
+  
+  .legRight{
+    border-radius: 40% 50% 20% 30%;
+    background-color: black;
+    display: flex;
+    width: 12vw;
+    height: 15vh;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    cursor: pointer;
+    
+  }
+  
+  
+  .gradient{
+    
+    background-image: radial-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 60%);
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    color: white;
+  }
+  
+
+</style>
+
+<body>
+  
+  <div id="box">
+    
+    <div class="earleft">
+      <div class="gradient">    
+      </div>
+    </div>
+    
+    <div class="earright">
+      <div class="gradient">    
+      </div>
+    </div>
+    
+    <div class="head">
+      <div class="gradient">    
+      </div>
+      
+      <div class="eyeleft">
+      </div>
+      
+      <div class="eyeright">
+      </div>
+      
+    </div>
+    
+    <div class="body">
+      <div class="gradient">    
+      </div>
+    </div>
+    
+    <div class="armLeftAnchor">
+      <div class="armLeft">
+        <div class="gradient">    
+      </div>
+      </div>
+      <div class="leftFinger1">
+        <div class="gradient">    
+      </div>
+      </div>
+      <div class="leftFinger2">
+        <div class="gradient">    
+      </div>
+      </div>
+      <div class="leftFinger3">
+        <div class="gradient">    
+      </div>
+      </div>
+      
+    </div>
+    
+    <div class="armRightAnchor">
+      <div class="armRight">
+        <div class="gradient">    
+      </div>
+      </div>
+      <div class="rightFinger1">
+        <div class="gradient">    
+      </div>
+      </div>
+      <div class="rightFinger2">
+        <div class="gradient">    
+      </div>
+      </div>
+      <div class="rightFinger3">
+        <div class="gradient">    
+      </div>
+      </div>
+      
+    </div>
+    
+    <div class="legLeftAnchor">
+      <div class="legLeft">
+        <div class="gradient">    
+      </div>
+      </div>
+    </div>
+    
+    <div class="legRightAnchor">
+      <div class="legRight">
+        <div class="gradient">    
+      </div>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+</body>
+
+<script>
+
+  const earLeftAnimate = [
+  { transform: 'rotate(0)' },
+  { transform: 'rotate(-45deg)' },
+  { transform: 'rotate(0)' }
+];
+  
+  const earLeftTiming = {
+  duration: 1000,
+  iterations: 2,
+}
+  
+  const earLeft = document.querySelector(".earleft");
+  
+  earLeft.addEventListener('click', () => {
+  earLeft.animate(earLeftAnimate, earLeftTiming);
+});
+  
+  
+   const earRightAnimate = [
+  { transform: 'rotate(0)' },
+  { transform: 'rotate(45deg)' },
+  { transform: 'rotate(0)' }
+];
+  
+  const earRightTiming = {
+  duration: 1000,
+  iterations: 2,
+}
+  
+  const earRight = document.querySelector(".earright");
+  
+  earRight.addEventListener('click', () => {
+  earRight.animate(earRightAnimate, earRightTiming);
+});
+  
+  
+  const eyeLeftAnimate = [
+  { transform: 'scale(1,1)' },
+  { transform: 'scale(1,0)' },
+  { transform: 'scale(1,1)' }
+];
+  
+  const eyeLeftTiming = {
+  duration: 500,
+  iterations: 1,
+}
+  
+  const eyeLeft = document.querySelector(".eyeleft");
+  
+  eyeLeft.addEventListener('click', () => {
+  eyeLeft.animate(eyeLeftAnimate, eyeLeftTiming);
+});
+  
+  const eyeRightAnimate = [
+  { transform: 'scale(1,1)' },
+  { transform: 'scale(1,0)' },
+  { transform: 'scale(1,1)' }
+];
+  
+  const eyeRightTiming = {
+  duration: 250,
+  iterations: 2,
+}
+  
+  const eyeRight = document.querySelector(".eyeright");
+  
+  eyeRight.addEventListener('click', () => {
+  eyeRight.animate(eyeRightAnimate, eyeRightTiming);
+});
+  
+  const armLeftAnimate = [
+  { transform: 'rotate(0)' },
+  { transform: 'rotate(45deg)' },
+  { transform: 'rotate(0)' }
+];
+  
+  const armLeftTiming = {
+  duration: 800,
+  iterations: 2,
+}
+  
+  const armLeft = document.querySelector(".armLeftAnchor");
+  
+  const leftFinger1Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(40%, 40%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const leftFinger1Timing = {
+  duration: 500,
+  iterations: 3,
+}
+  
+  const leftFinger1 = document.querySelector(".leftFinger1")
+  
+  const leftFinger2Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(40%, 0%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const leftFinger2Timing = {
+  duration: 500,
+  iterations: 3,
+}
+  
+  const leftFinger2 = document.querySelector(".leftFinger2")
+  
+  const leftFinger3Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(40%, -40%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const leftFinger3Timing = {
+  duration: 500,
+  iterations: 3,
+}
+  
+  const leftFinger3 = document.querySelector(".leftFinger3")
+  
+  armLeft.addEventListener('click', () => {
+  armLeft.animate(armLeftAnimate, armLeftTiming);
+    leftFinger1.animate(leftFinger1Animate, leftFinger1Timing);
+    leftFinger2.animate(leftFinger2Animate, leftFinger2Timing);
+    leftFinger3.animate(leftFinger3Animate, leftFinger3Timing);
+});
+  
+  const armRightAnimate = [
+  { transform: 'rotate(0)' },
+  { transform: 'rotate(45deg)' },
+  { transform: 'rotate(0)' }
+];
+  
+  const armRightTiming = {
+  duration: 600,
+  iterations: 1,
+}
+  
+  const armRight = document.querySelector(".armRightAnchor");
+  
+  const rightFinger1Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(-40%, 40%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const rightFinger1Timing = {
+  duration: 500,
+  iterations: 2,
+}
+  
+  const rightFinger1 = document.querySelector(".rightFinger1")
+  
+  const rightFinger2Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(-40%, 0%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const rightFinger2Timing = {
+  duration: 500,
+  iterations: 2,
+}
+  
+  const rightFinger2 = document.querySelector(".rightFinger2")
+  
+  const rightFinger3Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(-40%, -40%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const rightFinger3Timing = {
+  duration: 500,
+  iterations: 2,
+}
+  
+  const rightFinger3 = document.querySelector(".rightFinger3")
+  
+  armRight.addEventListener('click', () => {
+  armRight.animate(armRightAnimate, armRightTiming);
+    rightFinger1.animate(rightFinger1Animate, rightFinger1Timing);
+    rightFinger2.animate(rightFinger2Animate, rightFinger2Timing);
+    rightFinger3.animate(rightFinger3Animate, rightFinger3Timing);
+});
+  
+  const legLeftAnimate = [
+  { transform: 'scale(1,1)' },
+  { transform: 'scale(1,.5)' },
+  { transform: 'scale(1,1)' }
+];
+  
+  const legLeftTiming = {
+  duration: 250,
+  iterations: 1,
+}
+  
+  const legLeft = document.querySelector(".legLeftAnchor");
+  
+  legLeft.addEventListener('click', () => {
+  legLeft.animate(legLeftAnimate, legLeftTiming);
+});
+  
+  const legRightAnimate = [
+  { transform: 'translate(0%)' },
+  { transform: 'translate(30%)' },
+  { transform: 'translate(0%)' }
+];
+  
+  const legRightTiming = {
+  duration: 400,
+  iterations: 2,
+}
+  
+  const legRight = document.querySelector(".legRightAnchor");
+  
+  legRight.addEventListener('click', () => {
+  legRight.animate(legRightAnimate, legRightTiming);
+});
+  
+
+
+</script>
